@@ -21,5 +21,9 @@ export const Wrapper = styled.footer`
   }
   @media (min-width: 776px) {
     flex-direction: row;
+    span {
+      margin-left: 0.75rem;
+      margin-right: 0.75rem;
+    }
   }
 `;
