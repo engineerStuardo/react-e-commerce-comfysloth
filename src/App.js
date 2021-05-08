@@ -19,25 +19,13 @@ const App = () => {
       <Navbar />
       <Sidebar />
       <Switch>
-        <Route exact path='/'>
-          <HomePage />
-        </Route>
-        <Route exact path='/about'>
-          <AboutPage />
-        </Route>
-        <Route exact path='/cart'>
-          <CartPage />
-        </Route>
-        <Route exact path='/products'>
-          <ProductsPage />
-        </Route>
-        <Route exact path='/products/:id' children={<SingleProductPage />} />
-        <Route exact path='/checkout'>
-          <CheckoutPage />
-        </Route>
-        <Route path='*'>
-          <ErrorPage />
-        </Route>
+        <Route exact path='/' component={HomePage} />
+        <Route exact path='/about' component={AboutPage} />
+        <Route exact path='/cart' component={CartPage} />
+        <Route exact path='/products' component={ProductsPage} />
+        <Route exact path='/products/:id' component={SingleProductPage} />
+        <Route exact path='/checkout' component={CheckoutPage} />
+        <Route path='*' component={ErrorPage} />
       </Switch>
       <Footer />
     </Router>

@@ -1,16 +1,6 @@
-import React from 'react'
-import { FaShoppingCart, FaUserMinus, FaUserPlus } from 'react-icons/fa'
-import { Link } from 'react-router-dom'
-import styled from 'styled-components'
-import { useProductsContext } from '../context/products_context'
-import { useCartContext } from '../context/cart_context'
-import { useUserContext } from '../context/user_context'
+import styled from 'styled-components';
 
-const CartButtons = () => {
-  return <h4>cart buttons </h4>
-}
-
-const Wrapper = styled.div`
+export const Wrapper = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr;
   align-items: center;
@@ -20,9 +10,7 @@ const Wrapper = styled.div`
     color: var(--clr-grey-1);
     font-size: 1.5rem;
     letter-spacing: var(--spacing);
-    color: var(--clr-grey-1);
     display: flex;
-
     align-items: center;
   }
   .cart-container {
@@ -59,8 +47,8 @@ const Wrapper = styled.div`
     color: var(--clr-grey-1);
     letter-spacing: var(--spacing);
     svg {
+      height: 1.6rem;
       margin-left: 5px;
     }
   }
-`
-export default CartButtons
+`;
