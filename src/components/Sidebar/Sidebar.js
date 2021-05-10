@@ -4,12 +4,14 @@ import { FaTimes } from 'react-icons/fa';
 
 import { SidebarContainer } from './styled';
 import logo from '../../assets/logo.svg';
-import { useProductsContext } from '../../context/products_context';
+import { useProductsContext } from '../../context/custom_hooks';
 import { links } from '../../utils/constants';
 import CartButtons from '../CartButtons/CartButtons';
 import { useUserContext } from '../../context/user_context';
 
 const Sidebar = () => {
+  const data = useProductsContext();
+  console.log(data);
   const isOpen = true;
 
   return (
