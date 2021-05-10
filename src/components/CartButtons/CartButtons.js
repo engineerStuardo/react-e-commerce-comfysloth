@@ -7,22 +7,20 @@ import { useProductsContext } from '../../context/products_context';
 import { useCartContext } from '../../context/cart_context';
 import { useUserContext } from '../../context/user_context';
 
-const CartButtons = () => {
-  return (
-    <Wrapper className='cart-btn-wrapper'>
-      <Link to='/cart' className='cart-btn'>
-        Cart{' '}
-        <span className='cart-container'>
-          <FaShoppingCart />
-          <span className='cart-value'>12</span>
-        </span>
-      </Link>
-      <button type='button' className='auth-btn'>
-        Login
-        <FaUserPlus />
-      </button>
-    </Wrapper>
-  );
-};
+const CartButtons = () => (
+  <Wrapper className='cart-btn-wrapper'>
+    <Link to='/cart' className='cart-btn'>
+      Cart{' '}
+      <span className='cart-container'>
+        <FaShoppingCart />
+        <span className='cart-value'>12</span>
+      </span>
+    </Link>
+    <button type='button' className='auth-btn'>
+      Login
+      <FaUserPlus />
+    </button>
+  </Wrapper>
+);
 
 export default CartButtons;
