@@ -15,7 +15,7 @@ import ProductList from './ProductList'
 import Sort from './Sort'
 import Stars from './Stars'
 import CartContent from './CarContent'
-import PageHero from './PageHero'
+import PageHero from './PageHero/PageHero'
 import StripeCheckout from './StripeCheckout'
 export {
   FeaturedProducts,
