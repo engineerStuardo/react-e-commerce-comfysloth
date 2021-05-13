@@ -1,12 +1,6 @@
-import React from 'react'
-import styled from 'styled-components'
-import { services } from '../utils/constants'
+import styled from 'styled-components';
 
-const Services = () => {
-  return <h4>services </h4>
-}
-
-const Wrapper = styled.section`
+export const Wrapper = styled.section`
   h3,
   h4 {
     color: var(--clr-primary-1);
@@ -68,5 +62,4 @@ const Wrapper = styled.section`
       transform: translateY(5rem);
     }
   }
-`
-export default Services
+`;
