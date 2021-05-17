@@ -59,6 +59,10 @@ const AddToCart = ({ product: { id, stock, colors } }) => {
 
 const Wrapper = styled.section`
   margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  
   .colors {
     display: grid;
     grid-template-columns: 125px 1fr;
