@@ -5,7 +5,7 @@ import ErrorPage from './Error/ErrorPage';
 import HomePage from './HomePage';
 import PrivateRoute from './PrivateRoute';
 import ProductsPage from './ProductsPage';
-import SingleProductPage from './SingleProductPage';
+import SingleProductPage from './SingleProductPage/SingleProductPage';
 
 export {
   AboutPage,
