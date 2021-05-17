@@ -17,8 +17,6 @@ const Stars = ({ stars, reviews }) => {
     );
   });
 
-  console.log(tmpStars)
-
   return (
     <Wrapper>
       <div className='stars'>{tmpStars}</div>
