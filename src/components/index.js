@@ -12,7 +12,7 @@ import ProductImages from './ProductImages/ProductImages';
 import AddToCart from './AddToCart/AddToCart';
 import Filters from './Filters';
 import ProductList from './ProductList/ProductList';
-import Sort from './Sort';
+import Sort from './Sort/Sort';
 import Stars from './Stars/Stars';
 import CartContent from './CarContent';
 import PageHero from './PageHero/PageHero';
