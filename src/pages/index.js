@@ -4,7 +4,7 @@ import CheckoutPage from './CheckoutPage/CheckoutPage';
 import ErrorPage from './Error/ErrorPage';
 import HomePage from './HomePage';
 import PrivateRoute from './PrivateRoute';
-import ProductsPage from './ProductsPage';
+import ProductsPage from './ProductsPage/ProductsPage';
 import SingleProductPage from './SingleProductPage/SingleProductPage';
 
 export {

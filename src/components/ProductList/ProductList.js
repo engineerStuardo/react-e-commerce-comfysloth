@@ -1,7 +1,7 @@
 import React from 'react';
-import { useFilterContext } from '../context/custom_hooks';
-import GridView from './GridView';
-import ListView from './ListView';
+import { useFilterContext } from '../../context/custom_hooks';
+import GridView from '../GridView/GridView';
+import ListView from '../ListView/ListView';
 
 const ProductList = () => {
   const { filtered_products: products, grid_view } = useFilterContext();
@@ -18,7 +18,7 @@ const ProductList = () => {
     return <ListView products={products} />;
   }
 
-  return <GridView products={products}>product list</GridView>;
+  return <GridView products={products} />;
 };
 
 export default ProductList;

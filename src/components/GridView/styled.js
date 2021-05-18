@@ -1,20 +1,6 @@
-import React from 'react';
 import styled from 'styled-components';
-import Product from './Product/Product';
 
-const GridView = ({ products }) => {
-  return (
-    <Wrapper>
-      <div className='products-container'>
-        {products.map(product => (
-          <Product key={product.id} {...product} />
-        ))}
-      </div>
-    </Wrapper>
-  );
-};
-
-const Wrapper = styled.section`
+export const Wrapper = styled.section`
   img {
     height: 175px;
   }
@@ -35,5 +21,3 @@ const Wrapper = styled.section`
     }
   }
 `;
-
-export default GridView;
