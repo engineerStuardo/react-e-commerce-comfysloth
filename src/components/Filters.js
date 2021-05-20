@@ -7,7 +7,15 @@ import { getUniqueValues, formatPrice } from '../utils/helpers';
 
 const Filters = () => {
   const {
-    filters: { text, category, company, color, min_price, max_price, shipping },
+    filters: {
+      text,
+      category,
+      company,
+      colors,
+      min_price,
+      max_price,
+      shipping,
+    },
     updateFilters,
     clearFilters,
     all_products,
@@ -15,7 +23,7 @@ const Filters = () => {
 
   const categories = getUniqueValues(all_products, 'category');
   const companies = getUniqueValues(all_products, 'company');
-  const colors = getUniqueValues(all_products, 'colors');
+  const allColors = getUniqueValues(all_products, 'colors');
 
   return (
     <Wrapper>
@@ -62,6 +70,41 @@ const Filters = () => {
                   </option>
                 ))}
               </select>
+            </div>
+            <div className='form-control'>
+              <h5>colors</h5>
+              <div className='colors'>
+                {allColors.map((colorItem, index) => {
+                  if (colorItem === 'all')
+                    return (
+                      <button
+                        key={index}
+                        name='colors'
+                        onClick={updateFilters}
+                        data-color={colorItem}
+                        className={`${
+                          colorItem === colors ? 'all-btn active' : 'all-btn'
+                        }`}
+                      >
+                        all
+                      </button>
+                    );
+                  return (
+                    <button
+                      key={index}
+                      name='colors'
+                      style={{ background: colorItem }}
+                      className={`${
+                        colorItem === colors ? 'color-btn active' : 'color-btn'
+                      }`}
+                      data-color={colorItem}
+                      onClick={updateFilters}
+                    >
+                      {colorItem === colors ? <FaCheck /> : null}
+                    </button>
+                  );
+                })}
+              </div>
             </div>
           </div>
         </form>
