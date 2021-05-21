@@ -10,7 +10,7 @@ import Loading from './Loading/Loading';
 import Error from './Error/Error';
 import ProductImages from './ProductImages/ProductImages';
 import AddToCart from './AddToCart/AddToCart';
-import Filters from './Filters';
+import Filters from './Filters/Filters';
 import ProductList from './ProductList/ProductList';
 import Sort from './Sort/Sort';
 import Stars from './Stars/Stars';
