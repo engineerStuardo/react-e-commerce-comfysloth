@@ -38,6 +38,7 @@ export const Wrapper = styled.section`
     border-radius: var(--radius);
     border-color: transparent;
     padding: 0.25rem;
+    text-transform: capitalize;
   }
   .colors {
     display: flex;
