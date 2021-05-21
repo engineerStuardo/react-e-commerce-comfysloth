@@ -1,7 +1,7 @@
 import React from 'react';
 
 export const Category = ({ categories, updateFilters, category }) => (
-  <>
+  <div className='form-control'>
     <h5>category</h5>
     <div>
       {categories.map((categoryItem, index) => (
@@ -18,5 +18,5 @@ export const Category = ({ categories, updateFilters, category }) => (
         </button>
       ))}
     </div>
-  </>
+  </div>
 );

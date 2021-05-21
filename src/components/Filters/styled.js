@@ -54,18 +54,16 @@ export const Wrapper = styled.section`
     border: none;
     cursor: pointer;
     opacity: 0.5;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    display: grid;
+    place-items: center;
     svg {
       font-size: 0.5rem;
       color: var(--clr-white);
     }
   }
   .all-btn {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    display: grid;
+    place-items: center;
     margin-right: 0.5rem;
     opacity: 0.5;
   }

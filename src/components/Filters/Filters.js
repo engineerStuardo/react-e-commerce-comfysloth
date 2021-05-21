@@ -31,23 +31,21 @@ const Filters = () => {
       <div className='content'>
         <form onSubmit={e => e.preventDefault()}>
           <SearchInput text={text} updateFilters={updateFilters} />
-          <div className='form-control'>
-            <Category
-              categories={categories}
-              updateFilters={updateFilters}
-              category={category}
-            />
-            <Company
-              updateFilters={updateFilters}
-              company={company}
-              companies={companies}
-            />
-            <Colors
-              allColors={allColors}
-              updateFilters={updateFilters}
-              colors={colors}
-            />
-          </div>
+          <Category
+            categories={categories}
+            updateFilters={updateFilters}
+            category={category}
+          />
+          <Company
+            updateFilters={updateFilters}
+            company={company}
+            companies={companies}
+          />
+          <Colors
+            allColors={allColors}
+            updateFilters={updateFilters}
+            colors={colors}
+          />
           <Price
             price={price}
             updateFilters={updateFilters}
