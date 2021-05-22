@@ -3,7 +3,14 @@ import React from 'react';
 import { useFilterContext } from '../../context/custom_hooks';
 import { getUniqueValues } from '../../utils/helpers';
 import { Wrapper } from './styled';
-import { SearchInput, Category, Company, Colors, Price } from '../Filters';
+import {
+  SearchInput,
+  Category,
+  Company,
+  Colors,
+  Price,
+  Shipping,
+} from '../Filters';
 
 const Filters = () => {
   const {
@@ -52,7 +59,11 @@ const Filters = () => {
             min_price={min_price}
             max_price={max_price}
           />
+          <Shipping updateFilters={updateFilters} shipping={shipping} />
         </form>
+        <button type='button' className='clear-btn' onClick={clearFilters}>
+          clear filters
+        </button>
       </div>
     </Wrapper>
   );
