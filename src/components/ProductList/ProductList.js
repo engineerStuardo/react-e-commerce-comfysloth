@@ -2,9 +2,18 @@ import React from 'react';
 import { useFilterContext } from '../../context/custom_hooks';
 import GridView from '../GridView/GridView';
 import ListView from '../ListView/ListView';
+import { Loading } from '../../components/';
 
 const ProductList = () => {
-  const { filtered_products: products, grid_view } = useFilterContext();
+  const {
+    filtered_products: products,
+    grid_view,
+    loading,
+  } = useFilterContext();
+
+  if (loading) {
+    return <Loading />;
+  }
 
   if (products.length < 1) {
     return (

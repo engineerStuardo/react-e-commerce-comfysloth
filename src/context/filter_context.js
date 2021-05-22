@@ -18,6 +18,7 @@ const initialState = {
   all_products: [],
   grid_view: true,
   sort: 'price-lowest',
+  loading: true,
   filters: {
     text: '',
     company: 'all',
@@ -38,6 +39,7 @@ export const FilterProvider = ({ children }) => {
 
   useEffect(() => {
     dispatch({ type: LOAD_PRODUCTS, payload: products });
+    state.loading = false;
   }, [products]);
 
   const setGridView = () => {
