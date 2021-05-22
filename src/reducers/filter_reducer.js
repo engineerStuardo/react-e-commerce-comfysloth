@@ -58,8 +58,20 @@ const filter_reducer = (state, action) => {
         filters: { ...state.filters, [name]: value },
       };
     case FILTER_PRODUCTS:
+      const { all_products } = state;
+      const { text, category, company, colors, price, shipping } =
+        state.filters;
+      let tmpProducts = [...all_products];
+
+      if (text) {
+        tmpProducts = tmpProducts.filter(item =>
+          item.name.toLowerCase().startsWith(text.toLowerCase())
+        );
+      }
+
       return {
         ...state,
+        filtered_products: tmpProducts,
       };
     case CLEAR_FILTERS:
       return {
