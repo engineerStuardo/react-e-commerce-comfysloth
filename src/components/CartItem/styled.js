@@ -15,8 +15,8 @@ export const Wrapper = styled.article`
   margin-bottom: 3rem;
   align-items: center;
   .title {
-    grid-template-rows: 75px;
     display: grid;
+    grid-template-rows: 75px;
     grid-template-columns: 75px 125px;
     align-items: center;
     text-align: left;
@@ -70,13 +70,11 @@ export const Wrapper = styled.article`
     color: var(--clr-white);
     background: transparent;
     border: transparent;
-    letter-spacing: var(--spacing);
     background: var(--clr-red-dark);
     width: 1.5rem;
     height: 1.5rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    display: grid;
+    place-items: center;
     border-radius: var(--radius);
     font-size: 0.75rem;
     cursor: pointer;
