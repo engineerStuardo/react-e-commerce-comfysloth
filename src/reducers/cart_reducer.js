@@ -1,8 +1,8 @@
 import {
   ADD_TO_CART,
+  REMOVE_CART_ITEM,
   CLEAR_CART,
   COUNT_CART_TOTALS,
-  REMOVE_CART_ITEM,
   TOGGLE_CART_ITEM_AMOUNT,
 } from '../actions';
 
@@ -43,7 +43,17 @@ const cart_reducer = (state, action) => {
           cart: [...state.cart, newItem],
         };
       }
-
+    case REMOVE_CART_ITEM:
+      const tmpCart = state.cart.filter(item => item.id !== action.payload);
+      return {
+        ...state,
+        cart: tmpCart,
+      };
+    case CLEAR_CART:
+      return {
+        ...state,
+        cart: [],
+      };
     default:
       throw new Error(`No Matching "${action.type}" - action type`);
   }

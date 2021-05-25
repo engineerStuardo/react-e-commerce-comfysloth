@@ -4,8 +4,8 @@ import reducer from '../reducers/cart_reducer';
 import {
   ADD_TO_CART,
   REMOVE_CART_ITEM,
-  TOGGLE_CART_ITEM_AMOUNT,
   CLEAR_CART,
+  TOGGLE_CART_ITEM_AMOUNT,
   COUNT_CART_TOTALS,
 } from '../actions';
 
@@ -31,11 +31,15 @@ export const CartProvider = ({ children }) => {
     dispatch({ type: ADD_TO_CART, payload: { id, color, amount, product } });
   };
 
-  const removeItem = id => {};
+  const removeItem = id => {
+    dispatch({ type: REMOVE_CART_ITEM, payload: id });
+  };
 
   const toggleAmount = (id, value) => {};
 
-  const clearCart = () => {};
+  const clearCart = () => {
+    dispatch({ type: CLEAR_CART });
+  };
 
   useEffect(() => {
     localStorage.setItem('cart', JSON.stringify(state.cart));
