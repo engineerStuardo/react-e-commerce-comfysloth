@@ -11,6 +11,7 @@ import { useUserContext } from '../../context/custom_hooks';
 
 const Sidebar = () => {
   const { isSidebarOpen, closeSidebar } = useProductsContext();
+  const { myUser } = useUserContext();
 
   return (
     <SidebarContainer>
@@ -31,11 +32,13 @@ const Sidebar = () => {
               </Link>
             </li>
           ))}
-          <li>
-            <Link to='/checkout' onClick={closeSidebar}>
-              checkout
-            </Link>
-          </li>
+          {myUser && (
+            <li>
+              <Link to='/checkout' onClick={closeSidebar}>
+                checkout
+              </Link>
+            </li>
+          )}
         </ul>
         <CartButtons />
       </aside>
