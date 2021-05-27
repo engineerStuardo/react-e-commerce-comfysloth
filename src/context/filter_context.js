@@ -1,4 +1,4 @@
-import React, { useEffect, useContext, useReducer } from 'react';
+import React, { useEffect, useReducer } from 'react';
 
 import reducer from '../reducers/filter_reducer';
 import { useProductsContext } from './custom_hooks';
@@ -40,6 +40,7 @@ export const FilterProvider = ({ children }) => {
   useEffect(() => {
     dispatch({ type: LOAD_PRODUCTS, payload: products });
     state.loading = false;
+    // eslint-disable-next-line
   }, [products]);
 
   const setGridView = () => {

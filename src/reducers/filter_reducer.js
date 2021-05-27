@@ -59,7 +59,7 @@ const filter_reducer = (state, action) => {
       };
     case FILTER_PRODUCTS:
       const { all_products } = state;
-      const { text, category, company, colors, price, shipping, max_price } =
+      const { text, category, company, colors, price, shipping } =
         state.filters;
       let tmpProducts = [...all_products];
 
